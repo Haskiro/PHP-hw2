@@ -15,17 +15,19 @@
         </div>
     </header>
     <main>
-        <div class="feedback-container">
-            <?php
-                $url = 'https://httpbin.org/';
-                $answer = get_headers($url);
-            ?>
-            <textarea type="text" name="feedback" class="feedback-container__answer">
+        <div class="feedback">
+            <div class="feedback__body">
                 <?php
-                  print_r($answer);
+                    $url = 'https://httpbin.org/';
+                    $answer = get_headers($url);
                 ?>
-            </textarea>
-          </div>
+                <textarea type="text" name="feedback" class="feedback__textarea">
+                    <?php
+                      print_r($answer);
+                    ?>
+                </textarea>
+            </div>
+        </div>
     
     </main>
     <footer class="footer">

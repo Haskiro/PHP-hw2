@@ -104,3 +104,14 @@ main {
         line-height: 30px;
     }
 }
+.feedback {
+    width: 200px;
+    &__body {
+        margin: 0px auto;
+    }
+    &__textarea {
+        width: 100%;
+        height: 200px;
+    }
+}
+
