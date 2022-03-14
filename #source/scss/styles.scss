@@ -1,0 +1,106 @@
+body {
+    background-color: rgb(88, 86, 95);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+
+}
+body, html {
+    height: 100%;
+}
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+.header {
+    background-color: #00000031;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        text-align: center;
+        align-items: center;
+    }
+    &__logo {
+        width: 80px;
+        height: auto;
+        grid-column: 1/2;
+    }
+    &__text {
+        font-size: 25px;
+        grid-column: 2/4;
+    }
+}
+main {
+    flex: 1 0 auto;
+    padding-top: 30px;
+}
+.form {
+    width: 350px;
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-auto-rows: 40px;
+    gap: 15px;
+    &__field {
+        & label {
+        }
+        & p {
+            margin: 0px;
+        }
+        &_name {
+            display: flex;
+            flex-direction: column;
+            grid-column: 1/3;
+        }
+        &_email {
+            display: flex;
+            flex-direction: column;
+            grid-column: 3/5;
+        }
+        &_textarea {
+            grid-column: 1/5;
+            grid-row: 4/6;
+        }
+        &_appeal-type {
+            grid-column: 1/5;
+        }
+        &_answer-variant {
+            grid-column: 1/5;
+            grid-row-start: 3;
+
+        }
+    }
+    &__input {
+    }
+    &__radio {
+    }
+    &__button {
+        grid-column: span 2;
+    }
+    &__link {
+        grid-column: span 2;
+        display: block;
+        text-align: center;
+        align-content: center;
+        background-color: rgb(252, 246, 246);
+        border-radius: 3px;
+        height: 100%;
+        padding: 10px 0px;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: black;
+        border: 1px solid grey;
+    }
+}
+.footer {
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #00000031;
+    &__text {
+        font-size: 25px;
+        line-height: 30px;
+    }
+}

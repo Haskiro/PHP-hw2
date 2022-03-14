@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__body container">
+            <img src="/images/header/logo.png" alt="logo" class="header__logo">
+            <p class="header__text">Feedback form</p>
+        </div>
+    </header>
+    <main>
+        <form action="https://httpbin.org/post" class="form container" method="POST">
+            <div class="form__field form__field_name">
+                <label for="name">Имя</label>
+                <input type="text" class="form__input" id="name" name="name" required>
+            </div>
+            <div class="form__field form__field_email">
+                <label for="email">Почта</label>
+                <input type="email" class="form__input" id="email" name="email" required>
+            </div>
+            <div class="form__field form__field_appeal-type">
+                <p class="form__title">Тип обращения</p>
+                <label for="complaint">Жалоба</label>
+                <input type="radio" class="form__radio" id="complaint" name="appeal-type">
+                <label for="sentence">Предложение</label>
+                <input type="radio" class="form__radio" id="sentence" name="appeal-type">
+                <label for="gratitude">Благодарность</label>
+                <input type="radio" class="form__radio" id="gratitude" name="appeal-type" checked>
+            </div>
+            <textarea name="appeal" id="appeal" cols="20" rows="5" class="form__field form__field_textarea" placeholder="Текст обращения"></textarea>
+            <div class="form__field form__field_answer-variant">
+                <p class="form__title">Вариант ответа</p>
+                <label for="sms">Смс</label>
+                <input type="checkbox" class="form__radio" id="sms" name="answer-variant">
+                <label for="email-checkbox">e-mail</label>
+                <input type="checkbox" class="form__radio" id="email-checkbox" name="answer-variant" checked>
+            </div>
+            <button type="submit" class="form__button">Отправить</button>
+            <a href="/main2.html" class="form__link">2 страница</a>
+        </form>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">Задание для самостоятельно работы</p>
+    </footer>
 </body>
 </html>
